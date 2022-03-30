@@ -221,6 +221,7 @@ def update_charts(type1, criteria):
 
     return generation_chart_figure, legendary_chart_figure
 
-
+# note by default, it uses 127.0.0.1, this will cause it listens only localhost, it can't answer the request send
+# by service.
 if __name__ == "__main__":
     app.run_server(host="0.0.0.0",debug=False, threaded=True, port=8888)
