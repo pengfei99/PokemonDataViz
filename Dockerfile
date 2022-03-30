@@ -10,11 +10,12 @@ COPY ./requirements.txt /app/requirements.txt
 # install all the requirements
 RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
 
-# copy the main code of backup
-COPY pokemon_dv /app/pokemon_dv
+# copy the main code
+COPY pokemon_dv/app.py /app/app.py
+COPY pokemon_dv/assets /app/assets
 
 # set up python path for the added source
 ENV PYTHONPATH "${PYTHONPATH}:/app"
 
 # call the function
-CMD ["python"]
+CMD ["python app.py"]
