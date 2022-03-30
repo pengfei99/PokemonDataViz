@@ -223,4 +223,4 @@ def update_charts(type1, criteria):
 
 
 if __name__ == "__main__":
-    app.run_server(debug=False, threaded=True, port=8888)
+    app.run_server(host="0.0.0.0",debug=False, threaded=True, port=8888)

@@ -5,4 +5,4 @@ export DB_PORT=5432
 export DB_NAME=north_wind
 export DB_TABLE_NAME=pokemon_stat
 
-python app.py
+python pokemon_dv/app.py
