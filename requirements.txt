@@ -1,0 +1,6 @@
+dash
+pandas
+openpyxl
+psycopg2-binary
+SQLAlchemy
+dash-bootstrap-components
