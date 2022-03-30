@@ -75,6 +75,7 @@ app_name = "Dash Pokemon"
 
 server = app.server
 
+db_table_name = os.getenv("DB_TABLE_NAME")
 # --------------------------------------------------------------------------------------------
 # app controls
 
@@ -110,7 +111,7 @@ app.layout = html.Div(
                             id="type-filter",
                             options=[
                                 {"label": type1, "value": type1}
-                                for type1 in np.sort(get_dataframe("pokemon_stat").type_1.unique())
+                                for type1 in np.sort(get_dataframe(db_table_name).type_1.unique())
                             ],
                             value="Bug",
                             clearable=False,
@@ -180,7 +181,8 @@ app.layout = html.Div(
     ],
 )
 def update_charts(type1, criteria):
-    df = get_dataframe("pokemon_stat")
+
+    df = get_dataframe(db_table_name)
     filtered_df = df[df["type_1"] == type1]
     best_pokemon = filtered_df.loc[filtered_df[criteria].idxmax()].name
     print(filtered_df.head())
