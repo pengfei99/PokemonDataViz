@@ -12,9 +12,6 @@ spec:
       labels:
         app: pokemon-data-viz
     spec:
-      volumes:
-      - name: html
-        emptyDir: {}
       containers:
       - name: web-server
         image: liupengfei99/pokemon-dataviz
@@ -28,9 +25,9 @@ spec:
           - name: DB_URL
             value: "" # your db server url example: postgresql-124499:5432
           - name: DB_PORT
-            value: "5432" # your db server port example : 5432
+            value: "5432" # your db server port example: 5432
           - name: DB_NAME
-            value: "north_wind"  # your db name example : north_wind
+            value: "north_wind"  # your db name example: north_wind
           - name: DB_TABLE_NAME
             value: "pokemon_stat" # your table name example: pokemon_stat
         command: [ sh, -c ]
