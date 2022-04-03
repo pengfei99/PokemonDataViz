@@ -18,10 +18,16 @@ spec:
         ports:
         - containerPort: 8888
         env:
-          - name: DB_LOGIN
-            value: "" # your db server login example: user-pengfei
-          - name: DB_PWD
-            value: ""    # your db server login example: admin
+          - name: DB_LOGIN # your db server login example: user-pengfei
+            valueFrom:
+              secretKeyRef:
+                name: postgres-login-pwd
+                key: login
+          - name: DB_PWD # your db server login example: admin
+            valueFrom:
+              secretKeyRef:
+                name: postgres-login-pwd
+                key: pwd
           - name: DB_URL
             value: "" # your db server url example: postgresql-124499:5432
           - name: DB_PORT
