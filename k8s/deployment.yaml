@@ -22,12 +22,12 @@ spec:
             valueFrom:
               secretKeyRef:
                 name: postgres-login-pwd
-                key: login
+                key: username
           - name: DB_PWD # your db server login example: admin
             valueFrom:
               secretKeyRef:
                 name: postgres-login-pwd
-                key: pwd
+                key: password
           - name: DB_URL
             value: "" # your db server url example: postgresql-124499:5432
           - name: DB_PORT

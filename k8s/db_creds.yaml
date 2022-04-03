@@ -5,5 +5,5 @@ metadata:
 type: kubernetes.io/basic-auth
 # string data accepts clear text, data accepts only base64 code
 stringData:
-  login: pengfei
-  pwd: foobar
+  username: pengfei
+  password: foobar
