@@ -20,6 +20,10 @@ After above config, you can run below command to deploy the application in the k
 kubectl apply -f k8s/.
 ```
 
+You should see below interface if everything works well
+
+![pokemon_data_viz_example.PNG](img/pokemon_data_viz_example.PNG)
+
 ## Data ingestion (etl) pipeline
 
 As we mentioned before, this app read data from a database. If you don't know how to do etl, you can use the [etl pipeline](argo_workflow/pokemon_etl_data_pipeline.yaml) to populate your database server.
