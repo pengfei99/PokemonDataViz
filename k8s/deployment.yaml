@@ -23,17 +23,17 @@ spec:
               secretKeyRef:
                 name: postgres-login-pwd
                 key: username
-          - name: DB_PWD # your db server login example: admin
+          - name: DB_PWD # your db server password example: toto1234
             valueFrom:
               secretKeyRef:
                 name: postgres-login-pwd
                 key: password
           - name: DB_URL
-            value: "postgresql-124499" # your db server url example: postgresql-124499:5432
+            value: "postgresql-511542" # your db server url example: postgresql-124499:5432
           - name: DB_PORT
             value: "5432" # your db server port example: 5432
           - name: DB_NAME
-            value: "north_wind"  # your db name example: north_wind
+            value: "defaultdb"  # your db name example: north_wind
           - name: DB_TABLE_NAME
             value: "pokemon_stat" # your table name example: pokemon_stat
         command: [ sh, -c ]
