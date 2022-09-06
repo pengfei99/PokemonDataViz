@@ -12,6 +12,8 @@ This application is meant to run inside a k8s deployment. Before you apply the k
 2. setup the db server location (url, port, db_name, and table name) in `deployment.yaml`
 3. setup the url of your app in `ingress.yaml`
 
+We don't recommand you to track the secret.yaml in git. So we only provide a template [here](template/db_creds_secret.yaml). You need to copy it to k8s and edit it accordingly.
+
 After above config, you can run below command to deploy the application in the k8s cluster.
 ```shell
 # If you have a kube client
